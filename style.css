@@ -1,0 +1,137 @@
+body{
+    margin: 0 auto;
+    height: 1000px;
+}
+:root{
+    --header_color: rgb(70, 0, 169);
+    --text_header: rgb(37, 109, 255);
+    --pointed_text: rgb(0,0,0);
+    --modal_back: rgba(93, 0, 255, 0.4);
+    --shadow: rgba(0, 0, 0, 0.796);
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal_back);
+    z-index: 100;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.x{
+    max-height: 25px;
+    max-width: 25px;
+    background-color: var(--text_header);
+    color: var(--header_color);
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.modal {
+    display: grid;
+    position: absolute;
+    top: 3%;
+    left: 35%;
+    transform: translate(-50%, -50%) scale(0.5);
+    min-width: 500px;
+    height: 700px;
+    padding: 14px;
+    background-color: var(--header_color);
+    border-radius: 8px;
+    box-shadow: 0 4px 24px black;
+    color: var(--text_header);
+    opacity: 0;
+}
+
+.backdrop:not(.is-hidden) .modal {
+    animation: modal 0.4s ease forwards;
+}
+
+@keyframes modal {
+    0% {
+        min-height: 50px;
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        min-height: 600px;
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+header {
+    display: flex;
+    position: sticky;
+    background-color: var(--header_color);
+    margin: 0 auto;
+    z-index: 10;
+    top: 0;
+    height: 88px;
+}
+
+.nav_link{
+    font-size: 25px;
+    margin-left: 40px;
+    transition: transform;
+    transition-timing-function: ease-out;
+    transition-duration: 150ms;
+}
+.nav_link a{
+    margin-bottom: 4px;
+    color: var(--text_header);
+    text-decoration: none;
+    
+}
+
+nav {
+    display: flex;
+    margin: 0 auto;
+   
+}
+.nav_link:hover{
+    color: var(--pointed_text);
+    border-bottom: 2px solid var(--pointed_text);
+    transform: translateY(-4px);
+}
+.nav_link a:hover{
+    color: var(--pointed_text);
+}
+
+.logo{
+    margin: 28px 0px 28px 48px;
+}
+.header_but{
+    background-color: var(--text_header);
+    color: var(--header_color);
+    border-radius: 25px;
+    height: 50%;
+    align-self: center;
+    margin-right: 48px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: box-shadow transform;
+    transition-timing-function: ease-out;
+    transition-duration: 150ms;
+}
+.header_but:hover{
+    transform: translateY(-6px);
+    box-shadow: 1px 2px 2px 1px var(--shadow);
+    
+}
+.header_but:active{
+    transform: translateY(0px);
+    box-shadow: 0px 0px 0px 0px var(--shadow);
+}
+.hero{
+    display: flex;
+}
