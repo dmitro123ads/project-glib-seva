@@ -8,6 +8,8 @@ body{
     --pointed_text: rgb(0,0,0);
     --modal_back: rgba(93, 0, 255, 0.4);
     --shadow: rgba(0, 0, 0, 0.796);
+    --main_font: Space Grotesk;
+    --addi_font: Be Vietnam Pro;
 }
 
 .backdrop {
@@ -32,8 +34,19 @@ body{
     color: var(--header_color);
     cursor: pointer;
     border-radius: 100%;
+    transition: box-shadow transform;
+    transition-timing-function: ease-out;
+    transition-duration: 150ms;
 }
-
+.x:hover{
+    transform: translateY(-3px);
+    box-shadow: 1px 2px 2px 1px var(--shadow);
+    cursor: pointer;
+}
+.x:active{
+    transform: translateY(0px);
+    box-shadow: 0px 0px 0px 0px var(--shadow);
+}
 .modal {
     display: grid;
     position: absolute;
@@ -48,6 +61,7 @@ body{
     box-shadow: 0 4px 24px black;
     color: var(--text_header);
     opacity: 0;
+    font-family: var(--main_font);
 }
 
 .backdrop:not(.is-hidden) .modal {
@@ -77,6 +91,7 @@ header {
     z-index: 10;
     top: 0;
     height: 88px;
+    font-family: var(--main_font);
 }
 
 .nav_link{
@@ -122,10 +137,12 @@ nav {
     transition: box-shadow transform;
     transition-timing-function: ease-out;
     transition-duration: 150ms;
+    font-family: var(--main_font);
 }
 .header_but:hover{
     transform: translateY(-6px);
     box-shadow: 1px 2px 2px 1px var(--shadow);
+    cursor: pointer;
     
 }
 .header_but:active{
@@ -134,4 +151,44 @@ nav {
 }
 .hero{
     display: flex;
+    font-family: var(--main_font);
+}
+.film{
+    text-align: center;
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    
+}
+.poster{
+    border-radius: 20px;
+    width: 215px;
+}
+.film h2{
+    font-size: 36px;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+.film p{
+    font-size: 16px;
+    text-align: center;
+    font-family: var(--addi_font);
+    margin: 0;
+    opacity: 0.8;
+}
+.discount{
+    color: var(--header_color);
+    background-color: var(--text_header);
+    border-radius: 20px;
+    text-align: center;
+    padding: 4px;
+    margin-left:30px ;
+    margin-right:30px ;
+}
+.discount h2{
+    font-size: 48px;
+    margin: 0;
+}
+.discount p{
+    margin: 0;
 }
