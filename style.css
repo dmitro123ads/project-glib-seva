@@ -3,13 +3,15 @@ body{
     height: 1000px;
 }
 :root{
-    --header_color: rgb(70, 0, 169);
-    --text_header: rgb(37, 109, 255);
+    --header_color: rgb(71, 0, 171);
+    --text_header: rgb(30, 100, 240);
     --pointed_text: rgb(0,0,0);
     --modal_back: rgba(93, 0, 255, 0.4);
     --shadow: rgba(0, 0, 0, 0.796);
     --main_font: Space Grotesk;
     --addi_font: Be Vietnam Pro;
+    --logo_color: rgb(122, 20, 160);
+    --placeholder_color: #6e6e6e;
 }
 
 .backdrop {
@@ -28,12 +30,15 @@ body{
     pointer-events: none;
 }
 .x{
+    display: flex;
     max-height: 25px;
     max-width: 25px;
     background-color: var(--text_header);
     color: var(--header_color);
     cursor: pointer;
     border-radius: 100%;
+    justify-self: end;
+
     transition: box-shadow transform;
     transition-timing-function: ease-out;
     transition-duration: 150ms;
@@ -125,10 +130,13 @@ nav {
 .logo{
     margin: 28px 0px 28px 48px;
 }
+.logo_part{
+    color: var(--logo_color);
+}
 .header_but{
     background-color: var(--text_header);
     color: var(--header_color);
-    border-radius: 25px;
+    border-radius: 16px;
     height: 50%;
     align-self: center;
     margin-right: 48px;
@@ -149,13 +157,9 @@ nav {
     transform: translateY(0px);
     box-shadow: 0px 0px 0px 0px var(--shadow);
 }
-.hero{
-    display: flex;
-    font-family: var(--main_font);
-}
 .film{
     text-align: center;
-    width: 250px;
+    
     margin: 0 auto;
     margin-bottom: 30px;
     
@@ -164,6 +168,7 @@ nav {
     border-radius: 20px;
     width: 215px;
 }
+
 .film h2{
     font-size: 36px;
     margin-bottom: 8px;
@@ -175,11 +180,13 @@ nav {
     font-family: var(--addi_font);
     margin: 0;
     opacity: 0.8;
+    width: 250px;
+    justify-self: center;
 }
 .discount{
     color: var(--header_color);
     background-color: var(--text_header);
-    border-radius: 20px;
+    border-radius: 16px;
     text-align: center;
     padding: 4px;
     margin-left:30px ;
@@ -191,4 +198,60 @@ nav {
 }
 .discount p{
     margin: 0;
+    font-size: 20px;
+}
+.modal_form{
+    background-color: var(--text_header);
+    color: var(--header_color);
+    border-radius: 16px;
+    align-self: center;
+    font-size: 16px;
+    font-weight: bold;
+    width: 80%;
+    font-family: var(--main_font);
+    display: block;
+    justify-self: center;
+    margin: 20px;
+    height: 42px;
+}
+.modal_form::placeholder{
+    color: var(--placeholder_color);
+}
+
+.modal_but{
+    background-color: var(--text_header);
+    color: var(--header_color);
+    border-radius: 16px;
+    align-self: center;
+    font-size: 16px;
+    font-weight: bold;
+    width: 80%;
+    font-family: var(--main_font);
+    cursor: pointer;
+    display: block;
+    justify-self: center;
+    margin: 20px;
+    height: 42px;
+}
+
+.hero{
+    display: flex;
+    font-family: var(--main_font);
+    background-color: var(--header_color);
+    color: var(--text_header);
+    height: 500px;
+    padding-left: 30px;
+    padding-top: 160px;
+    
+}
+.hero_poster{
+    margin: 0 auto;
+}
+.present{
+    background-color: var(--text_header);
+    color: var(--header_color);
+    border-radius: 16px;
+    padding-left: 16px;
+    font-size: 16px;
+    max-width: 200px;
 }
