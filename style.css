@@ -136,7 +136,7 @@ nav {
 .header_but{
     background-color: var(--text_header);
     color: var(--header_color);
-    border-radius: 16px;
+    border-radius: 25px;
     height: 50%;
     align-self: center;
     margin-right: 48px;
@@ -239,13 +239,16 @@ nav {
     font-family: var(--main_font);
     background-color: var(--header_color);
     color: var(--text_header);
-    height: 500px;
+    height: 1500px;
     padding-left: 30px;
-    padding-top: 160px;
+    padding-top: 90px;
     
 }
 .hero_poster{
     margin: 0 auto;
+    width: 400px;
+    height: 580px;
+    
 }
 .present{
     background-color: var(--text_header);
@@ -254,4 +257,24 @@ nav {
     padding-left: 16px;
     font-size: 16px;
     max-width: 200px;
+}
+.hero_content{
+    padding-top: 60px;
+}
+.hero_name{
+    font-size: 100px;
+    margin: 0;
+}
+.hero_but1{
+    background-color: var(--text_header);
+    color: var(--header_color);
+    border-radius: 25px;
+    height: 50px;
+    width: 236px;
+    align-self: center;
+    margin-right: 24px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: var(--main_font);
+    cursor: pointer;
 }
