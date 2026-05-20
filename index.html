@@ -21,7 +21,7 @@
             <p class="nav_link"><a href="">Community</a></p>
 
         </nav>
-        <button class="header_but">Join the Club</button>
+        <button class="header_but" data-modal-open2>Join the Club</button>
     </header>
     <main>
         <section class="hero">
@@ -52,13 +52,28 @@
                 <h2>9.5</h2>
                 
             </div>
-            <form action="">
+            <form action="" class="form">
             <input type="text" placeholder="share you`r opinion" class="modal_form">
             <button class="modal_but" type="reset">send</button>
         </form>
         </div>
     </div>
 </div>
+<div class="backdrop is-hidden" data-modal2>
+        <div class="modal2">
+
+            <div>
+                <button data-modal-close2 class="x">✕</button>
+                <h2 class="form_name">Join the club</h2>
+                <form action="" class="form">
+                    <input type="text" placeholder="your name" class="modal_form">
+                    <input type="email" placeholder="your emeil"class="modal_form">
+                    <input type="password" placeholder="password" class="modal_form">
+                    <button type="reset" class="modal_but2 ">join</button>
+                </form>
+            </div>
+        </div>
+    </div>
 <script src="app.js"></script>
 
 </html>

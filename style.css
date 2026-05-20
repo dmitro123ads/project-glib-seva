@@ -69,6 +69,23 @@ body{
     font-family: var(--main_font);
 }
 
+.modal2 {
+    display: grid;
+    position: absolute;
+    top: 15ch;
+    left: 55ch;
+    transform: translate(-50%, -50%) scale(0.5);
+    width: 400px;
+    height: 450px;
+    padding: 14px;
+    background-color: var(--header_color);
+    border-radius: 8px;
+    box-shadow: 0 4px 24px black;
+    color: var(--text_header);
+    opacity: 0;
+    font-family: var(--main_font);
+}
+
 .backdrop:not(.is-hidden) .modal {
     animation: modal 0.4s ease forwards;
 }
@@ -87,7 +104,24 @@ body{
     }
 
 }
+.backdrop:not(.is-hidden) .modal2 {
+    animation: modal2 0.4s ease forwards;
+}
 
+@keyframes modal2 {
+    0% {
+        min-height: 50px;
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        min-height: 450px;
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
 header {
     display: flex;
     position: sticky;
@@ -217,6 +251,7 @@ nav {
 }
 .modal_form::placeholder{
     color: var(--placeholder_color);
+    font-family: var(--addi_font);
 }
 
 .modal_but{
@@ -301,4 +336,25 @@ nav {
     font-family: var(--main_font);
     cursor: pointer;
     border: 2px solid var(--text_header);
+}
+.form_name{
+    justify-self: center;
+    font-family: var(--main_font);
+    font-size: 45px;
+}
+.modal_but2{
+    background-color: var(--text_header);
+    color: var(--header_color);
+    border-radius: 16px;
+    align-self: center;
+    font-size: 16px;
+    font-weight: bold;
+    width: 80%;
+    font-family: var(--main_font);
+    cursor: pointer;
+    display: block;
+    justify-self: center;
+    margin-top: 50px;
+    height: 42px;
+    border: 0px ;
 }
