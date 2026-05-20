@@ -340,7 +340,7 @@ nav {
 .form_name{
     justify-self: center;
     font-family: var(--main_font);
-    font-size: 45px;
+    font-size: 50px;
 }
 .modal_but2{
     background-color: var(--text_header);
@@ -357,4 +357,22 @@ nav {
     margin-top: 50px;
     height: 42px;
     border: 0px ;
+}
+.modal_form2{
+    background-color: var(--text_header);
+    color: var(--header_color);
+    border-radius: 16px;
+    align-self: center;
+    font-size: 16px;
+    font-weight: bold;
+    width: 70%;
+    font-family: var(--main_font);
+    display: block;
+    justify-self: center;
+    margin: 20px;
+    height: 42px;
+}
+.modal_form2::placeholder{
+    color: var(--placeholder_color);
+    font-family: var(--addi_font);
 }
