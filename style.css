@@ -85,6 +85,22 @@ body{
     opacity: 0;
     font-family: var(--main_font);
 }
+.modal3 {
+    display: grid;
+    position: absolute;
+    top: 15ch;
+    left: 55ch;
+    transform: translate(-50%, -50%) scale(0.5);
+    width: 400px;
+    height: 550px;
+    padding: 14px;
+    background-color: var(--header_color);
+    border-radius: 8px;
+    box-shadow: 0 4px 24px black;
+    color: var(--text_header);
+    opacity: 0;
+    font-family: var(--main_font);
+}
 
 .backdrop:not(.is-hidden) .modal {
     animation: modal 0.4s ease forwards;
@@ -109,6 +125,24 @@ body{
 }
 
 @keyframes modal2 {
+    0% {
+        min-height: 50px;
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        min-height: 450px;
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+.backdrop:not(.is-hidden) .modal3 {
+    animation: modal2 0.4s ease forwards;
+}
+
+@keyframes modal3 {
     0% {
         min-height: 50px;
         transform: scale(0.5);
@@ -172,8 +206,9 @@ nav {
     color: var(--header_color);
     border-radius: 25px;
     height: 50%;
+    width: 135px;
     align-self: center;
-    margin-right: 48px;
+    margin-right: 18px;
     font-size: 16px;
     font-weight: bold;
     transition: box-shadow transform;
@@ -181,6 +216,7 @@ nav {
     transition-duration: 150ms;
     font-family: var(--main_font);
     border: 0px ;
+    
 }
 .header_but:hover{
     transform: translateY(-6px);
@@ -192,6 +228,31 @@ nav {
     transform: translateY(0px);
     box-shadow: 0px 0px 0px 0px var(--shadow);
 }
+.header_but2{
+    background-color: var(--text_header);
+    color: var(--header_color);
+    border-radius: 25px;
+    height: 50%;
+    width: 135px;
+    align-self: center;
+    margin-right: 48px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: box-shadow transform;
+    transition-timing-function: ease-out;
+    transition-duration: 150ms;
+    font-family: var(--main_font);
+    border: 0px ;
+}
+.header_but2:hover{
+    transform: translateY(-6px);
+    box-shadow: 1px 2px 2px 1px var(--shadow);
+    cursor: pointer;
+    
+}
+.header_but2:active{
+    transform: translateY(0px);
+    box-shadow: 0px 0px 0px 0px var(--shadow);}
 .film{
     text-align: center;
     
@@ -342,6 +403,10 @@ nav {
     font-family: var(--main_font);
     font-size: 50px;
 }
+.form_name2{
+    text-align: center;
+    font-family: var(--main_font);
+}
 .modal_but2{
     background-color: var(--text_header);
     color: var(--header_color);
@@ -375,4 +440,37 @@ nav {
 .modal_form2::placeholder{
     color: var(--placeholder_color);
     font-family: var(--addi_font);
+}
+.rad{
+    display: flex  ;
+    margin:  20px 20px 20px 50px;
+    height: 30px;
+    align-items: center;
+}
+.check{
+    display: flex  ;
+    margin:  20px 20px 20px 50px;
+    align-items: center;
+    height: 30px;
+}
+.modal_but3{
+    background-color: var(--text_header);
+    color: var(--header_color);
+    border-radius: 16px;
+    align-self: center;
+    font-size: 16px;
+    font-weight: bold;
+    width: 80%;
+    font-family: var(--main_font);
+    cursor: pointer;
+    display: block;
+    justify-self: center;
+    height: 42px;
+    border: 0px ;
+}
+.terms_of_service{
+    color: var(--text_header);
+}
+.terms_of_service:hover{
+    color: var(--pointed_text);
 }
