@@ -88,7 +88,7 @@ body{
 .modal3 {
     display: grid;
     position: absolute;
-    top: 15ch;
+    top: 10ch;
     left: 55ch;
     transform: translate(-50%, -50%) scale(0.5);
     width: 400px;
